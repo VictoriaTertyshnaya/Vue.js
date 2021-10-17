@@ -36,7 +36,9 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'PaymentList',
-  components: Page,
+  components: {
+    Page
+  },
   props: {
       list: {
           type: Array,
@@ -44,9 +46,9 @@ export default {
       }
   },
   methods: {
-        ...mapActions('payments', ['getPayments']),   
+        ...mapActions('payments', ['getPayments']),
 
-    },    
+    },
     mounted() {
         this.getPayments();
     },
@@ -66,7 +68,7 @@ export default {
 }
 .item, .main_list {
     display: flex;
-    padding: 10px;                       
+    padding: 10px;
 }
 .id {
     width: 50px;

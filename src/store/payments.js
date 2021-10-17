@@ -1,6 +1,5 @@
 const state = {
     payments: []
-
 }
 
 const mutations = {
